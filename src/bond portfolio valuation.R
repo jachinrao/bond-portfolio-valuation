@@ -1,3 +1,5 @@
+library(copula)
+library(lifecontingencies)
 delta1<-function(t){0.04-0.01*exp(-0.2*t)}
 delta2<-function(t){0.05-0.01*exp(-0.2*t)}
 delta3<-function(t){0.06-0.01*exp(-0.2*t)}
@@ -185,7 +187,7 @@ sd(sim_portfolio_return_int_risk)
 quantile(sim_portfolio_return_int_risk,0.005)
 
 
-# Exercise 3
+
 highx<-lowx+.7
 high_corrn_cop<-normalCopula(highx,dim=5,dispstr = "un")
 correlations_high<-matrix(c(1,.8,.8,.8,.8,.8,1,.85,.85,.85,.8,.85,1,.9,.9,.8,.85,.90,1,.95,.8,.85,.9,.95,1),5,5,byrow=TRUE)
