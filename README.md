@@ -40,6 +40,7 @@ Run the Script. The script will:
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
+
 $$
 \begin{aligned}
 \delta_{AAA} &= 0.04 - 0.01\exp(-0.2t) \\
@@ -48,9 +49,21 @@ $$
 \end{aligned}
 $$
 
+<img src="https://github.com/jachinrao/bond-portfolio-valuation/blob/main/results/instantaneous%20forward%20rate.png" alt="Instantaneous Forward Rate" width="600">
 
+<img src="https://github.com/jachinrao/bond-portfolio-valuation/blob/main/results/spot%20rate.png" alt="Spot Rate" width="600">
 
 - **Transition Matrix**: Models rating changes (e.g., 85% chance AAA stays AAA, 20% chance A defaults).
+
+  ## Transition Matrix
+
+  The transition matrix represents the probabilities of bond rating changes over one year:
+
+  |         | 1 (AAA) | 2 (AA) | 3 (A) | Default |
+  | ------- | ------- | ------ | ----- | ------- |
+  | 1 (AAA) | 0.85    | 0.12   | 0.02  | 0.01    |
+  | 2 (AA)  | 0.10    | 0.73   | 0.15  | 0.02    |
+  | 3 (A)   | 0.05    | 0.30   | 0.45  | 0.20    |
 
 - **Copula Simulation**: Applies a Gaussian copula to introduce correlation between bonds.
 
