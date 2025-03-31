@@ -22,7 +22,8 @@ R packages:
 - `lifecontingencies` - for financial calculations like present value.
 
 Install the required packages in R:
-\```R install.packages(c("copula", "lifecontingencies"))```
 
-
+```R
+install.packages(c("copula", "lifecontingencies"))
+```
 
