@@ -27,7 +27,7 @@ Install the required packages in R:
 install.packages(c("copula", "lifecontingencies"))
 ```
 
-Run the Script. The script will:
+Run the [Script](https://github.com/jachinrao/bond-portfolio-valuation/blob/main/src/bond%20portfolio%20valuation.R). The script will:
 
 - Define yield curves and bond parameters.
 - Simulate bond rating transitions using a Gaussian copula.
