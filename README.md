@@ -42,9 +42,9 @@ Run the Script. The script will:
   <img src="https://latex.codecogs.com/png.latex?\delta_{AA}=0.05-0.01e^{-0.2t}" alt="δ_AA equation">
   <img src="https://latex.codecogs.com/png.latex?\delta_{A}=0.06-0.01e^{-0.2t}" alt="δ_A equation">
 
-<img src="https://github.com/jachinrao/bond-portfolio-valuation/blob/main/results/instantaneous%20forward%20rate.png" alt="Instantaneous Forward Rate" width="300">
+<img src="https://github.com/jachinrao/bond-portfolio-valuation/blob/main/results/instantaneous%20forward%20rate.png" alt="Instantaneous Forward Rate" width="500">
 
-<img src="https://github.com/jachinrao/bond-portfolio-valuation/blob/main/results/spot%20rate.png" alt="Spot Rate" width="300">
+<img src="https://github.com/jachinrao/bond-portfolio-valuation/blob/main/results/spot%20rate.png" alt="Spot Rate" width="500">
 
 - **Transition Matrix**:  .
 
@@ -80,13 +80,13 @@ For the default portfolio with low correlation:
 
 <img src="https://github.com/jachinrao/bond-portfolio-valuation/blob/main/results/low%20correlation.png" alt="low correlation" width="600">
 
+<img src="https://github.com/jachinrao/bond-portfolio-valuation/blob/main/results/interest%20rate%20risk%20adjustment.png" alt="Interest rate risk adjustment" width="600">
+
 For a highly correlated portfolio:
 
 - Mean portfolio return: ~2.57%
 - Standard deviation: ~5.51%
 - 99.5% VaR: ~-17.85%
-
-<img src="https://github.com/jachinrao/bond-portfolio-valuation/blob/main/results/interest%20rate%20risk%20adjustment.png" alt="Interest rate risk adjustment" width="600">
 
 ## Limitations
 
