@@ -42,10 +42,13 @@ Run the Script. The script will:
 </script>
 
 $$
-\delta_{AAA}=0.04-0.01\exp(-0.2t)\\
-\delta_{AA}=0.05-0.01\exp(-0.2t)\\
-\delta_{A}=0.06-0.01\exp(-0.2t)
+\begin{aligned}
+\delta_{AAA} &= 0.04 - 0.01\exp(-0.2t) \\
+\delta_{AA}  &= 0.05 - 0.01\exp(-0.2t) \\
+\delta_{A}   &= 0.06 - 0.01\exp(-0.2t)
+\end{aligned}
 $$
+
 
 - **Transition Matrix**: Models rating changes (e.g., 85% chance AAA stays AAA, 20% chance A defaults).
 
