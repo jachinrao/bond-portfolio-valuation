@@ -37,7 +37,15 @@ Run the Script. The script will:
 ## Key Features
 
 - **Bond Pricing**: Uses spot and forward rates $\delta$ derived from instantaneous forward yield curves.
- ![Formula](https://latex.codecogs.com/png.latex?\delta_{AAA}=0.04-0.01\exp(-0.2t)\\\delta_{AA}=0.05-0.01\exp(-0.2t)\\\delta_{A}=0.06-0.01\exp(-0.2t))
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+$$
+\delta_{AAA}=0.04-0.01\exp(-0.2t)\\
+\delta_{AA}=0.05-0.01\exp(-0.2t)\\
+\delta_{A}=0.06-0.01\exp(-0.2t)
+$$
 
 - **Transition Matrix**: Models rating changes (e.g., 85% chance AAA stays AAA, 20% chance A defaults).
 
