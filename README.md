@@ -53,19 +53,25 @@ $$
 
 <img src="https://github.com/jachinrao/bond-portfolio-valuation/blob/main/results/spot%20rate.png" alt="Spot Rate" width="600">
 
-- **Transition Matrix**: Models rating changes (e.g., 85% chance AAA stays AAA, 20% chance A defaults).
+- **Transition Matrix**:  .
 
-  ## Transition Matrix
-
-  The transition matrix represents the probabilities of bond rating changes over one year:
+  The transition matrix represents the probabilities of bond rating changes over one year (e.g., 85% chance AAA stays AAA, 20% chance A defaults):
 
   |         | 1 (AAA) | 2 (AA) | 3 (A) | Default |
   | ------- | ------- | ------ | ----- | ------- |
   | 1 (AAA) | 0.85    | 0.12   | 0.02  | 0.01    |
   | 2 (AA)  | 0.10    | 0.73   | 0.15  | 0.02    |
   | 3 (A)   | 0.05    | 0.30   | 0.45  | 0.20    |
+  
+- **Copula Simulation**: Applies a Gaussian copula to introduce correlation between bonds. The correlation matrix used for the Gaussian copula with low correlation between bonds:
 
-- **Copula Simulation**: Applies a Gaussian copula to introduce correlation between bonds.
+  |        | Bond 1 | Bond 2 | Bond 3 | Bond 4 | Bond 5 |
+  | ------ | ------ | ------ | ------ | ------ | ------ |
+  | Bond 1 | 1.00   | 0.10   | 0.10   | 0.10   | 0.10   |
+  | Bond 2 | 0.10   | 1.00   | 0.15   | 0.15   | 0.15   |
+  | Bond 3 | 0.10   | 0.15   | 1.00   | 0.20   | 0.20   |
+  | Bond 4 | 0.10   | 0.15   | 0.20   | 1.00   | 0.25   |
+  | Bond 5 | 0.10   | 0.15   | 0.20   | 0.25   | 1.00   |
 
 - **Interest Rate Risk**: Optional adjustment using a normal distribution $N(1, 0.2^2)$.
 
@@ -79,7 +85,7 @@ For the default portfolio with low correlation:
 - Standard deviation: ~3.95%
 - 99.5% VaR: ~-8.85% (or ~-9.47% with interest rate risk)
 
-For a highly correlated portfolio (Exercise 15.3):
+For a highly correlated portfolio:
 
 - Mean portfolio return: ~2.57%
 - Standard deviation: ~5.51%
