@@ -8,7 +8,7 @@ The project simulates the future value distribution of a bond portfolio, account
 
 - A simplified bond rating system (AAA, AA, A, and default).
 - Yield curves for pricing bonds based on ratings.
-- A transition matrix derived from historical data to model rating changes.
+- A transition matrix  to model rating changes.
 - Gaussian copula for introducing correlation between bond transitions.
 - Portfolio return calculations with an optional interest rate risk adjustment.
 
@@ -37,21 +37,14 @@ Run the Script. The script will:
 ## Key Features
 
 - **Bond Pricing**: Uses spot and forward rates $\delta$ derived from instantaneous forward yield curves.
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
 
-$$
-\begin{aligned}
-\delta_{AAA} &= 0.04 - 0.01\exp(-0.2t) \\
-\delta_{AA}  &= 0.05 - 0.01\exp(-0.2t) \\
-\delta_{A}   &= 0.06 - 0.01\exp(-0.2t)
-\end{aligned}
-$$
+  <img src="https://latex.codecogs.com/png.latex?\delta_{AAA}=0.04-0.01e^{-0.2t}" alt="δ_AAA equation">
+  <img src="https://latex.codecogs.com/png.latex?\delta_{AA}=0.05-0.01e^{-0.2t}" alt="δ_AA equation">
+  <img src="https://latex.codecogs.com/png.latex?\delta_{A}=0.06-0.01e^{-0.2t}" alt="δ_A equation">
 
-<img src="https://github.com/jachinrao/bond-portfolio-valuation/blob/main/results/instantaneous%20forward%20rate.png" alt="Instantaneous Forward Rate" width="600">
+<img src="https://github.com/jachinrao/bond-portfolio-valuation/blob/main/results/instantaneous%20forward%20rate.png" alt="Instantaneous Forward Rate" width="300">
 
-<img src="https://github.com/jachinrao/bond-portfolio-valuation/blob/main/results/spot%20rate.png" alt="Spot Rate" width="600">
+<img src="https://github.com/jachinrao/bond-portfolio-valuation/blob/main/results/spot%20rate.png" alt="Spot Rate" width="300">
 
 - **Transition Matrix**:  .
 
@@ -85,17 +78,20 @@ For the default portfolio with low correlation:
 - Standard deviation: ~3.95%
 - 99.5% VaR: ~-8.85% (or ~-9.47% with interest rate risk)
 
+<img src="https://github.com/jachinrao/bond-portfolio-valuation/blob/main/results/low%20correlation.png" alt="low correlation" width="600">
+
 For a highly correlated portfolio:
 
 - Mean portfolio return: ~2.57%
 - Standard deviation: ~5.51%
 - 99.5% VaR: ~-17.85%
 
+<img src="https://github.com/jachinrao/bond-portfolio-valuation/blob/main/results/interest%20rate%20risk%20adjustment.png" alt="Interest rate risk adjustment" width="600">
+
 ## Limitations
 
 - Simplified rating system (only 3 ratings vs. real-world granularity).
 - Static yield curves (except for optional interest rate adjustment).
-- Assumes a 20% loss on default, which may not reflect real-world variability.
 
 ## Future Improvements
 
